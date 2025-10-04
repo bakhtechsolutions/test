@@ -23,7 +23,7 @@ const about_content: DataType = {
   subtitle: "About Me",
   award_title: "Independent Of The Year",
   award_des: "Annual Awards 2020 • awwwards.com",
-  about_des: <>Hello! I'm <span>Diego</span> a self-taught & award-winning <span>Digital Designer & Developer</span> with over <span>fifteen  years of work experience</span>. I started in my children's room and got pro at renowned digital<span> nexum AG</span> agencies.</>,
+  about_des: <>Hello! I'm <span>Olayemi</span> a self-taught & award-winning <span>Digital Designer & Developer</span> with over <span>fifteen  years of work experience</span>. I started in my children's room and got pro at renowned digital<span> nexum AG</span> agencies.</>,
   counter_data: [
     {
       id: 1,
