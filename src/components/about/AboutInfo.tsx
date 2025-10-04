@@ -39,7 +39,7 @@ const AboutInfo = () => {
               <div className="ab-info__text">
 
                 <div>
-                  I'm Diego <span className="line"></span> a self though & self learned designer
+                  I'm Olayemi <span className="line"></span> a self though & self learned designer
                   based in USA. I started as a financial planner & social
                   media marketer, but now I do mix of everything from
 
