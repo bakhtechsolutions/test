@@ -28,7 +28,7 @@ const hero_content: DataType = {
   ],
   sub_title: "Hello There!",
   title_1: "I am Olayemi",
-  words: ["Web", "App", "UX"],
+  words: ["Web", "Graphic", "UX"],
   title_2: "designer",
   sm_info: <>The combination of my passion for design, code & <br /> interaction web design world.</>,
   btn_text: <>Get <br /> In Touch</>,
