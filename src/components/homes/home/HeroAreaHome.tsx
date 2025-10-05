@@ -24,7 +24,7 @@ interface DataType {
 const hero_content: DataType = {
   slide_text: [
     "Visual designer",
-    "Visual designer",
+    "Visual esigner",
   ],
   sub_title: "Hello There!",
   title_1: "I am Olayemi",
