@@ -24,13 +24,13 @@ interface DataType {
 const hero_content: DataType = {
   slide_text: [
     "Visual designer",
-    "Visual esigner",
+    "Visual designer",
   ],
   sub_title: "Hello There!",
   title_1: "I am Olayemi",
-  words: ["Web", "Graphic", "UX"],
-  title_2: "designer",
-  sm_info: <>The combination of my passion for design, code & <br /> interaction web design world.</>,
+  words: ["Web Developer", "Creative Designer"],
+  title_2: "",
+  sm_info: <>I build modern, responsive, and user-centered websites that help businesses grow online. I also bring ideas to life through creative design, UI/UX, and digital content that strengthen brand identity and engagement.</>,
   btn_text: <>Get <br /> In Touch</>,
 
 }
