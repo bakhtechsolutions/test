@@ -21,8 +21,8 @@ interface DataType {
 
 const service_content: DataType = {
   subtitle: "Services",
-  title: <>Solution <br /> we provide.</>,
-  sm_des: <>The combination of my passion for design, code & <br /> interaction web design world.</>,
+  title: <>What I <br /> Offer.</>,
+  sm_des: <>Blending creativity, design, and development to craft <br /> modern, user-friendly, and engaging digital experiences.</>,
   accordion_data: [
     {
       id: 1,
@@ -119,34 +119,34 @@ const ServiceAreaHomeOne = () => {
 
                   <div className="tp-services-capsule-item-wrapper">
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Frontend</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Web Development</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Phototyping</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>UI/UX Design</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Design solutions</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Graphic Design</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Consulting</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Video Editing</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Brand strategy</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Social Media Management</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Consulting</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Website Maintenance</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Brand strategy</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#00CC97" }}>Responsive Design</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>UI/UX Design</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#19B3F1" }}>SEO Optimization</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Design Audit</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FF759C" }}>Brand Identity</span>
                     </p>
                     <p data-tp-throwable-el="">
-                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Testing</span>
+                      <span className="tp-services-capsule-item" style={{ backgroundColor: "#FFDB59", color: "#121212" }}>Creative Strategy</span>
                     </p>
                     <p data-tp-throwable-el="">
                       <span className="">
