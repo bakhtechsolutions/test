@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import portfolio_img_1 from "@/assets/img/portfolio/portfolio-2.jpg";
-import portfolio_img_2 from "@/assets/img/portfolio/portfolio-3.jpg";
-import portfolio_img_3 from "@/assets/img/portfolio/portfolio-1.jpg";
+import portfolio_img_1 from "@/assets/img/portfolio/AvillaMAG.jpg";
+import portfolio_img_2 from "@/assets/img/portfolio/AvillaMAG.jpg";
+import portfolio_img_3 from "@/assets/img/portfolio/AvillaMAG.jpg";
 
 import UpArrowIconPortfolio from '@/svg/home/PortfolioIcons/UpArrowIconPortfolio';
 import RitghtArrowIconPortfolio from '@/svg/home/PortfolioIcons/RitghtArrowIconPortfolio';
