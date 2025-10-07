@@ -23104,3 +23104,70 @@ html[tp-theme=tp-theme-light] .porfolio-details__navigation-bar-2 span svg .path
 }
 
 /*# sourceMappingURL=main.css.map */
+
+
+/* ensure portfolio item wraps correctly */
+.tp-portfolio-item-3 {
+  position: relative;
+  overflow: hidden;
+}
+
+/* image container for Next/Image fill */
+.tp-portfolio-thumb {
+  position: relative;
+  width: 100%;
+  height: 320px; /* change as needed or use responsive media queries */
+}
+
+/* project info overlay (bottom-left) */
+.tp-portfolio-info {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 3;
+  background: rgba(0,0,0,0.45); /* subtle backdrop for legibility */
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: #fff;
+  pointer-events: none; /* avoid blocking link clicks */
+}
+
+.tp-portfolio-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.tp-portfolio-type {
+  margin: 2px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* floating view button — follows mouse translate */
+.tp-portfolio-view-btn-3 {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  z-index: 4;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  pointer-events: none; /* so it doesn't block the link */
+  transition: transform 300ms ease;
+}
+
+/* responsive tweaks */
+@media (max-width: 992px) {
+  .tp-portfolio-thumb { height: 220px; }
+  .tp-portfolio-view-btn-3 { width: 56px; height: 56px; font-size: 11px; }
+}
+
