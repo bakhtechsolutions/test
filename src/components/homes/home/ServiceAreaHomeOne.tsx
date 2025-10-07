@@ -22,7 +22,7 @@ interface DataType {
 const service_content: DataType = {
   subtitle: "Services",
   title: <>What I <br /> Offer.</>,
-  sm_des: <>Blending creativity, design, and development to craft <br /> modern, user-friendly, and engaging digital experiences.</>,
+  sm_des: <>Blending creativity, design, and development to craft modern, user-friendly, and engaging digital experiences.</>,
   accordion_data: [
     {
       id: 1,
@@ -86,7 +86,7 @@ const { subtitle, title, sm_des, accordion_data } = service_content;
 
 
 const ServiceAreaHomeOne = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
 
   const handleItemClick = (index: number) => {
     setActive(index);
