@@ -23,7 +23,8 @@ const about_content: DataType = {
   subtitle: "About Me",
   award_title: "Creative Excellence",
   award_des: "Recognized for delivering outstanding digital solutions and clean design aesthetics.",
-  about_des: <>Hi! I'm <span>Olayemi</span>, a <span>Web Developer & Creative Designer</span> with over <span>five years of experience</span> building user-friendly websites and creating engaging visual content. My work blends design, functionality, and user experience to produce clean, responsive, and effective digital solutions. I've collaborated on projects across <span>real estate, eCommerce, education, and corporate sectors</span>, helping brands grow through design and technology.</>,
+  about_des: <>Hi! I'm <span>Olayemi</span>, a <span>Web Developer & Creative Designer</span> with over <span>five years of experience</span> creating clean, responsive, and engaging digital solutions across <span>web and design</span>.
+</>,
   counter_data: [
     {
       id: 1,
