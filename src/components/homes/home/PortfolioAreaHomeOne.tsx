@@ -11,126 +11,39 @@ import island from "@/assets/img/portfolio/portfolio-1.jpg";
 import beautypreneur from "@/assets/img/portfolio/portfolio-1.jpg";
 
 const projects = [
-  {
-    id: 1,
-    title: "Dermarepair Skincare",
-    type: "Ecommerce Website",
-    image: dermarepair,
-    link: "/portfolio/dermarepair-skincare",
-  },
-  {
-    id: 2,
-    title: "BOOK BEKEE",
-    type: "Booking Website",
-    image: bookbekee,
-    link: "/portfolio/book-bekee",
-  },
-  {
-    id: 3,
-    title: "Maple Education Canada Inc.",
-    type: "Corporate Website",
-    image: maple,
-    link: "/portfolio/maple-education",
-  },
-  {
-    id: 4,
-    title: "Avilla Mag",
-    type: "News & Magazine Website",
-    image: avilla,
-    link: "/portfolio/avilla-mag",
-  },
-  {
-    id: 5,
-    title: "Island Supermarket",
-    type: "Ecommerce Website",
-    image: island,
-    link: "/portfolio/island-supermarket",
-  },
-  {
-    id: 6,
-    title: "Beautypreneur Hub",
-    type: "Business & Directory",
-    image: beautypreneur,
-    link: "/portfolio/beautypreneur-hub",
-  },
+  { id: 1, title: "Dermarepair Skincare", type: "Ecommerce Website", image: dermarepair, link: "/portfolio/dermarepair-skincare" },
+  { id: 2, title: "BOOK BEKEE", type: "Booking Website", image: bookbekee, link: "/portfolio/book-bekee" },
+  { id: 3, title: "Maple Education Canada Inc.", type: "Corporate Website", image: maple, link: "/portfolio/maple-education" },
+  { id: 4, title: "Avilla Mag", type: "News & Magazine Website", image: avilla, link: "/portfolio/avilla-mag" },
+  { id: 5, title: "Island Supermarket", type: "Ecommerce Website", image: island, link: "/portfolio/island-supermarket" },
+  { id: 6, title: "Beautypreneur Hub", type: "Business & Directory", image: beautypreneur, link: "/portfolio/beautypreneur-hub" },
 ];
 
-const projects = [
-  {
-    id: 1,
-    title: "Dermarepair Skincare",
-    type: "Ecommerce Website",
-    image: dermarepair,
-    link: "/portfolio/dermarepair-skincare",
-  },
-  {
-    id: 2,
-    title: "BOOK BEKEE",
-    type: "Booking Website",
-    image: bookbekee,
-    link: "/portfolio/book-bekee",
-  },
-  {
-    id: 3,
-    title: "Maple Education Canada Inc.",
-    type: "Corporate Website",
-    image: maple,
-    link: "/portfolio/maple-education",
-  },
-  {
-    id: 4,
-    title: "Avilla Mag",
-    type: "News & Magazine Website",
-    image: avilla,
-    link: "/portfolio/avilla-mag",
-  },
-  {
-    id: 5,
-    title: "Island Supermarket",
-    type: "Ecommerce Website",
-    image: island,
-    link: "/portfolio/island-supermarket",
-  },
-  {
-    id: 6,
-    title: "Beautypreneur Hub",
-    type: "Business & Directory",
-    image: beautypreneur,
-    link: "/portfolio/beautypreneur-hub",
-  },
-];
-
-const PortfolioAreaHomeOne = () => {
+const PortfolioAreaHomeOne: React.FC = () => {
   return (
-    <section className="portfolio-section pt-120 pb-100">
+    <section className="modern-portfolio-section">
       <div className="container">
-        <div className="text-center mb-60">
+        <div className="portfolio-header">
           <h2 className="portfolio-title">Featured Projects</h2>
           <p className="portfolio-subtitle">
-            Showcasing selected works that highlight design, creativity, and functionality.
+            A showcase of selected works across eCommerce, corporate, and creative web experiences.
           </p>
         </div>
 
         <div className="portfolio-grid">
           {projects.map((project) => (
-            <div key={project.id} className="portfolio-card">
-              <Link href={project.link}>
-                <div className="portfolio-image">
-                  <Image src={project.image} alt={project.title} />
-                </div>
-                <div className="portfolio-info">
-                  <h3>{project.title}</h3>
-                  <p>{project.type}</p>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
+            <Link href={project.link} key={project.id} className="portfolio-card">
+              <div className="portfolio-image">
+                {/* Next/Image with fill: parent must be position:relative and have explicit height */}
+                <Image src={project.image} alt={project.title} fill sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw" style={{ objectFit: 'cover' }} />
+              </div>
 
-        <div className="text-center mt-60">
-          <Link href="/portfolio" className="explore-btn">
-            Explore More Projects
-          </Link>
+              <div className="portfolio-glass">
+                <h3 className="portfolio-project-title">{project.title}</h3>
+                <p className="portfolio-project-type">{project.type}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
