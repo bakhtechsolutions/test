@@ -12,7 +12,7 @@ import RitghtArrowIconPortfolio from '@/svg/home/PortfolioIcons/RitghtArrowIconP
 
 const portfolio_content = {
   subtitle: 'Project',
-  title: 'Latest projects',
+  title: 'Latest p rojects',
   portfolio_data: [
     {
       id: 2,
