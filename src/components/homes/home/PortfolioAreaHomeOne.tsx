@@ -1,129 +1,131 @@
-'use client';
-
-import React, { useRef } from 'react';
+"use client";
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import React from 'react';
 
-import project_img_1 from "@/assets/img/portfolio/3/portfolio-1.jpg";
-import project_img_2 from "@/assets/img/portfolio/3/portfolio-2.jpg";
-import project_img_3 from "@/assets/img/portfolio/3/portfolio-3.jpg";
-import project_img_4 from "@/assets/img/portfolio/3/portfolio-4.jpg";
+import portfolio_img_1 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_2 from "@/assets/img/portfolio/portfolio-3.jpg";
+import portfolio_img_3 from "@/assets/img/portfolio/portfolio-1.jpg";
 
-type Project = {
-  img: StaticImageData;
-  title: string;
-  type: string;
-  link: string;
-};
+import UpArrowIconPortfolio from '@/svg/home/PortfolioIcons/UpArrowIconPortfolio';
+import RitghtArrowIconPortfolio from '@/svg/home/PortfolioIcons/RitghtArrowIconPortfolio';
 
-const projects: Project[] = [
-  {
-    img: project_img_1,
-    title: "Prestige Flower Shop",
-    type: "eCommerce Website",
-    link: "/portfolio/prestige-flower-shop"
-  },
-  {
-    img: project_img_2,
-    title: "Fortmeade Design",
-    type: "Corporate Website",
-    link: "/portfolio/fortmeade-design"
-  },
-  {
-    img: project_img_3,
-    title: "Press Cabal",
-    type: "PR Website",
-    link: "/portfolio/press-cabal"
-  },
-  {
-    img: project_img_4,
-    title: "Think Canada Fair",
-    type: "Event Site (UI/UX)",
-    link: "/portfolio/think-canada-fair"
-  }
-];
-
-const ProjectAreaHomeOne: React.FC = () => {
-  // keep refs stable between renders
-  const hoverTextRefs = useRef<Array<HTMLDivElement | null>>([]);
-
-  const setRef = (el: HTMLDivElement | null, index: number) => {
-    hoverTextRefs.current[index] = el;
-  };
-
-  const moveText = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
-    const hoverTextRef = hoverTextRefs.current[index];
-    if (!hoverTextRef) return;
-
-    const rect = hoverTextRef.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
-    // move the view button smoothly to cursor
-    const btn = hoverTextRef.querySelector<HTMLElement>('.tp-portfolio-view-btn-3');
-    if (btn) {
-      // translate with small offset so the button centers under cursor
-      btn.style.transform = `translate(${x - btn.offsetWidth / 2}px, ${y - btn.offsetHeight / 2}px)`;
-      btn.style.transition = 'transform 0s';
+const portfolio_content = {
+  subtitle: 'Project',
+  title: 'Latest projects',
+  portfolio_data: [
+    {
+      id: 2,
+      img: portfolio_img_2,
+      bg_img: "/assets/img/portfolio/portfolio-3.jpg",
+      title: 'Space Needle',
+    },
+    {
+      id: 3,
+      img: portfolio_img_3,
+      bg_img: "/assets/img/portfolio/portfolio-1.jpg",
+      title: "Crisis Cleanup",
     }
-  };
+  ]
+}
+const { subtitle, title, portfolio_data } = portfolio_content
 
-  const resetBtn = (index: number) => {
-    const hoverTextRef = hoverTextRefs.current[index];
-    const btn = hoverTextRef?.querySelector<HTMLElement>('.tp-portfolio-view-btn-3');
-    if (btn) {
-      btn.style.transform = '';
-      btn.style.transition = 'transform 300ms ease';
-    }
-  };
+
+const PortfolioAreaHomeOne = () => {
 
   return (
-    <div className="tp-portfolio-area tp-btn-trigger-2 p-relative z-index-1 pt-280 pb-40 fix">
-      <div className="container">
-        <div className="row">
-          <div className="col-xl-12 text-center pb-30 portfolio-sec-pin">
-            <h3 className="tp-section-title-3 tp_title_anim">Featured Projects</h3>
-          </div>
+    <>
+      <section className="tp-portfolio-area tp-btn-trigger-2 p-relative z-index-1 pt-280 pb-40 fix">
+        <div className="tp-portfolio-top-text tp-portfolio-bg-text d-flex align-items-center tp-portfolio-bg-text-animation">
+          <p>{title}</p>
+          <p>{title}</p>
         </div>
-
-        <div className="row">
-          <div className="col-xl-12">
-            <div className="tp-portfolio-item-wrapper-3">
-
-              {projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="tp-portfolio-item-3 portfolio-panel pb-80 tp-hover-reveal-text"
-                  ref={(el) => setRef(el, index)}
-                  onMouseMove={(e) => moveText(e, index)}
-                  onMouseLeave={() => resetBtn(index)}
-                >
-                  <Link href={project.link} className="tp-portfolio-link">
-                    <div className="tp-portfolio-thumb">
-                      {/* use fill so image covers the container — parent has position:relative and set height via CSS */}
-                      <Image src={project.img} alt={project.title} fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    {/* Overlayed project info */}
-                    <div className="tp-portfolio-info">
-                      <h5 className="tp-portfolio-title">{project.title}</h5>
-                      <p className="tp-portfolio-type">{project.type}</p>
-                    </div>
-
-                    {/* Floating view button that follows mouse */}
-                    <div className="tp-portfolio-view-btn-3" aria-hidden>
-                      <span>View<br/>Work</span>
-                    </div>
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-lg-6">
+              <div className="tp-portfolio-wrapper pr-30 pt-55">
+                <div className="tp-section-title-wrapper mb-60">
+                  <div className="tp-section-title-inner tp_title_anim p-relative">
+                    <span className="tp-section-subtitle tp-portfolio-subtitle">{subtitle}</span>
+                    <h3 className="tp-section-title tp_title_anim">{title}</h3>
+                  </div>
+                </div>
+                <div className="tp-portfolio-item-wrapper">
+                  <div className="tp-portfolio-item mb-70">
+                    <Link href="/portfolio-details">
+                      <div className="tp-portfolio-thumb img-1 w-img fix ">
+                        <div className="tp-portfolio-thumb-img include-bg d-none"
+                          style={{ backgroundImage: 'url(/assets/img/portfolio/portfolio-2.jpg)' }}></div>
+                        <div className="tp-portfolio-thumb-img ">
+                          <Image data-speed="0.85" style={{ objectFit: 'cover', height: "auto" }} src={portfolio_img_1} alt="image-here" />
+                        </div>
+                      </div>
+                      <div className="tp-portfolio-content">
+                        <h3 className="tp-portfolio-title">Brand Identity </h3>
+                        <div className="tp-portfolio-meta d-flex align-items-center">
+                          <span className="tp-portfolio-meta-count">01</span>
+                          <span className="tp-portfolio-meta-arrow">
+                            <RitghtArrowIconPortfolio />
+                          </span>
+                          <div className="tp-portfolio-meta-hover">
+                            <span>Branding</span>
+                            <span className="tp-portfolio-meta-link">View Project</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+                <div className="tp-portfolio-more tp-hover-btn-wrapper tp-btn-bounce-2 d-none d-lg-block">
+                  <Link href="/portfolio-details"
+                    className="tp-hover-btn tp-hover-btn-item tp-btn-circle-2 d-flex align-items-center justify-content-center flex-column">
+                    <span className="tp-btn-circle-text-2">
+                      Explore <br /> All Project
+                      <span className="tp-btn-circle-arrow-2">
+                        <UpArrowIconPortfolio />
+                      </span>
+                    </span>
+                    <i className="tp-btn-circle-dot"></i>
                   </Link>
                 </div>
-              ))}
+              </div>
+            </div>
+            <div className="col-xl-6 col-lg-6">
+              <div className="tp-portfolio-item-wrapper pl-50">
+                {portfolio_data.map((item, i) =>
+                  <div key={i} className="tp-portfolio-item mb-70">
+                    <Link href="/portfolio-details">
+                      <div className="tp-portfolio-thumb img-2 w-img fix">
 
+                        <div className="tp-portfolio-thumb-img include-bg d-none"
+                          style={{ backgroundImage: `url(${item.bg_img})`, height: "auto" }}></div>
+                        <div className="tp-portfolio-thumb-img">
+                          <Image data-speed="0.85" style={{ height: "auto",}} src={item.img} alt="image-here" />
+                        </div>
+                      </div>
+                      <div className="tp-portfolio-content">
+                        <h3 className="tp-portfolio-title">{item.title}</h3>
+                        <div className="tp-portfolio-meta d-flex align-items-center">
+                          <span className="tp-portfolio-meta-count">02</span>
+                          <span className="tp-portfolio-meta-arrow">
+                            <RitghtArrowIconPortfolio />
+                          </span>
+                          <div className="tp-portfolio-meta-hover">
+                            <span>Branding</span>
+                            <span className="tp-portfolio-meta-link">View Project</span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                )} 
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
-export default ProjectAreaHomeOne;
+export default PortfolioAreaHomeOne;
