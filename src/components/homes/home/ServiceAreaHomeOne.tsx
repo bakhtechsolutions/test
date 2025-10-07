@@ -176,7 +176,7 @@ const ServiceAreaHomeOne = () => {
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target={`#collapse${item.tab_id}`}
-                            aria-expanded={`${i === 1 ? 'true' : 'false'}`}
+                            aria-expanded={`${i === 0 ? 'true' : 'false'}`}
                             aria-controls={`collapse${item.tab_id}`}
                             tabIndex={0}
                           >
