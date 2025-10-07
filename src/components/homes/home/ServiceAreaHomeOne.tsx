@@ -86,7 +86,7 @@ const { subtitle, title, sm_des, accordion_data } = service_content;
 
 
 const ServiceAreaHomeOne = () => {
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
 
   const handleItemClick = (index: number) => {
     setActive(index);
@@ -172,7 +172,7 @@ const ServiceAreaHomeOne = () => {
                       <div key={i} onClick={() => handleItemClick(i)} className={`accordion-item tp-services-accordion-item ${active === i ? 'active' : ''}`}>
                         <h2 className="accordion-header" id={`heading${item.tab_id}`}>
                           <button
-                            className={`accordion-button ${i === 1 ? '' : 'collapsed'}`}
+                            className={`accordion-button ${i === 0 ? '' : 'collapsed'}`}
                             type="button"
                             data-bs-toggle="collapse"
                             data-bs-target={`#collapse${item.tab_id}`}
@@ -186,7 +186,7 @@ const ServiceAreaHomeOne = () => {
                         </h2>
                         <div
                           id={`collapse${item.tab_id}`}
-                          className={`accordion-collapse collapse ${i === 1 ? 'show' : ''}`}
+                          className={`accordion-collapse collapse ${i === 0 ? 'show' : ''}`}
                           aria-labelledby={`heading${item.tab_id}`}
                           data-bs-parent="#accordionExample"
                         >
