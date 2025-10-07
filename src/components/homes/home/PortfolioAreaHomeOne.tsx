@@ -57,28 +57,26 @@ const projects = [
 
 const PortfolioAreaHomeOne = () => {
   return (
-    <section className="portfolio-grid-section pt-150 pb-100">
+    <section className="modern-portfolio-section">
       <div className="container">
-        <div className="section-header text-center mb-60">
-          <h2 className="section-title">Featured Projects</h2>
-          <p className="section-subtitle">
-            A collection of selected works across web, ecommerce, and brand projects.
+        <div className="portfolio-header">
+          <h2 className="portfolio-title">Featured Projects</h2>
+          <p className="portfolio-subtitle">
+            A showcase of selected works across eCommerce, corporate, and creative web experiences.
           </p>
         </div>
 
         <div className="portfolio-grid">
           {projects.map((project) => (
-            <div key={project.id} className="portfolio-card">
-              <Link href={project.link}>
-                <div className="portfolio-image">
-                  <Image src={project.image} alt={project.title} />
-                </div>
-                <div className="portfolio-info">
-                  <h3 className="portfolio-title">{project.title}</h3>
-                  <p className="portfolio-type">{project.type}</p>
-                </div>
-              </Link>
-            </div>
+            <Link href={project.link} key={project.id} className="portfolio-card">
+              <div className="portfolio-image">
+                <Image src={project.image} alt={project.title} />
+              </div>
+              <div className="portfolio-glass">
+                <h3 className="portfolio-project-title">{project.title}</h3>
+                <p className="portfolio-project-type">{project.type}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
