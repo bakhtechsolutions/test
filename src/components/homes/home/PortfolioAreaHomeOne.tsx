@@ -1,27 +1,28 @@
-'use client';
-import Link from 'next/link';
-import Image from 'next/image';
-import React from 'react';
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import React from "react";
 
-import project1 from "@/assets/img/portfolio/portfolio-2.jpg";
-import project2 from "@/assets/img/portfolio/portfolio-2.jpg";
-import project3 from "@/assets/img/portfolio/portfolio-2.jpg";
-import project4 from "@/assets/img/portfolio/portfolio-2.jpg";
-import project5 from "@/assets/img/portfolio/portfolio-2.jpg";
-import project6 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_1 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_2 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_3 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_4 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_5 from "@/assets/img/portfolio/portfolio-2.jpg";
+import portfolio_img_6 from "@/assets/img/portfolio/portfolio-2.jpg";
 
 const portfolio_content = {
-  subtitle: 'Projects',
-  title: 'Featured Works',
+  subtitle: "Projects",
+  title: "Featured Works",
   portfolio_data: [
-    { id: 1, img: project1, title: 'Dermarepair Skincare', category: 'Ecommerce Website', link: '/portfolio/dermarepair-skincare' },
-    { id: 2, img: project2, title: 'BOOK BEKEE', category: 'Booking Website', link: '/portfolio/book-bekee' },
-    { id: 3, img: project3, title: 'Maple Education Canada Inc.', category: 'Corporate Website', link: '/portfolio/maple-education' },
-    { id: 4, img: project4, title: 'Avilla Mag', category: 'News & Magazine Website', link: '/portfolio/avilla-mag' },
-    { id: 5, img: project5, title: 'Island Supermarket', category: 'Ecommerce Website', link: '/portfolio/island-supermarket' },
-    { id: 6, img: project6, title: 'Beautypreneur Hub', category: 'Business & Directory', link: '/portfolio/beautypreneur-hub' },
-  ]
+    { id: 1, img: portfolio_img_1, title: "Dermarepair Skincare", category: "Ecommerce Website", link: "/portfolio/dermarepair-skincare" },
+    { id: 2, img: portfolio_img_2, title: "BOOK BEKEE", category: "Booking Website", link: "/portfolio/book-bekee" },
+    { id: 3, img: portfolio_img_3, title: "Maple Education Canada Inc.", category: "Corporate Website", link: "/portfolio/maple-education" },
+    { id: 4, img: portfolio_img_4, title: "Avilla Mag", category: "News & Magazine Website", link: "/portfolio/avilla-mag" },
+    { id: 5, img: portfolio_img_5, title: "Island Supermarket", category: "Ecommerce Website", link: "/portfolio/island-supermarket" },
+    { id: 6, img: portfolio_img_6, title: "Beautypreneur Hub", category: "Business & Directory", link: "/portfolio/beautypreneur-hub" },
+  ],
 };
+
 const { subtitle, title, portfolio_data } = portfolio_content;
 
 const PortfolioAreaHomeOne = () => {
@@ -35,9 +36,8 @@ const PortfolioAreaHomeOne = () => {
           </div>
         </div>
 
-        {/* Portfolio Grid */}
         <div className="tp-portfolio-item-wrapper grid-view">
-          <div className="row g-4">
+          <div className="row gy-4 gx-4">
             {portfolio_data.map((item) => (
               <div key={item.id} className="col-xl-4 col-lg-4 col-md-6">
                 <div className="tp-portfolio-item tp-portfolio-card">
@@ -48,10 +48,13 @@ const PortfolioAreaHomeOne = () => {
                         alt={item.title}
                         width={600}
                         height={400}
-                        style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+                        className="tp-portfolio-image"
                       />
+                      <div className="tp-portfolio-overlay">
+                        <span className="tp-portfolio-view">View Project</span>
+                      </div>
                     </div>
-                    <div className="tp-portfolio-content">
+                    <div className="tp-portfolio-content text-left">
                       <h3 className="tp-portfolio-title">{item.title}</h3>
                       <p className="tp-portfolio-category">{item.category}</p>
                     </div>
@@ -62,7 +65,6 @@ const PortfolioAreaHomeOne = () => {
           </div>
         </div>
 
-        {/* Explore Button */}
         <div className="text-center mt-60">
           <Link href="/portfolio" className="tp-btn tp-hover-btn tp-hover-btn-item">
             Explore More Projects
