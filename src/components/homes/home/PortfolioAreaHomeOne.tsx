@@ -3,12 +3,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 
-import project1 from "@/assets/img/portfolio/dermarepair.jpg";
-import project2 from "@/assets/img/portfolio/bookbekee.jpg";
-import project3 from "@/assets/img/portfolio/maple.jpg";
-import project4 from "@/assets/img/portfolio/avilla.jpg";
-import project5 from "@/assets/img/portfolio/island.jpg";
-import project6 from "@/assets/img/portfolio/beautypreneur.jpg";
+import project1 from "@/assets/img/portfolio/portfolio-2.jpg";
+import project2 from "@/assets/img/portfolio/portfolio-2.jpg";
+import project3 from "@/assets/img/portfolio/portfolio-2.jpg";
+import project4 from "@/assets/img/portfolio/portfolio-2.jpg";
+import project5 from "@/assets/img/portfolio/portfolio-2.jpg";
+import project6 from "@/assets/img/portfolio/portfolio-2.jpg";
 
 const portfolio_content = {
   subtitle: 'Projects',
