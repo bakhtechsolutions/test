@@ -23107,3 +23107,75 @@ html[tp-theme=tp-theme-light] .porfolio-details__navigation-bar-2 span svg .path
 
 
 
+
+.portfolio-grid-section {
+  background: #f9fafb;
+}
+
+.section-header {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #121212;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 16px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.portfolio-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.portfolio-type {
+  font-size: 14px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 26px;
+  }
+  .portfolio-info {
+    padding: 15px;
+  }
+}
+
