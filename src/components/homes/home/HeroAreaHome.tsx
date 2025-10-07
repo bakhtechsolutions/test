@@ -30,7 +30,7 @@ const hero_content: DataType = {
   title_1: "I am Olayemi",
   words: ["Web Developer", "Creative Designer"],
   title_2: "",
-  sm_info: <>I build modern, responsive, and user-centered websites that help businesses grow online. I also bring ideas to life through creative design, UI/UX, and digital content that strengthen brand identity and engagement.</>,
+  sm_info: <>I build responsive websites and create designs that bring ideas to life.</>,
   btn_text: <>Get <br /> In Touch</>,
 
 }

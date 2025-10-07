@@ -27,45 +27,56 @@ const service_content: DataType = {
     {
       id: 1,
       tab_id: "One",
-      question: "UI/UX Design",
-      answer: "Project systematization is something I place a lot of emphasis on. My passion Design Systems.",
+      question: "Web Design & Development",
+      answer: "I build modern, responsive, and easy-to-use websites that deliver seamless performance and a great user experience across all devices.",
       some_features: [
-        "Interface design",
-        "Creating design systems",
-        "Ui kits",
+        "Responsive design",
+        "Frontend & backend development",
+        "SEO optimization",
       ]
     },
     {
       id: 2,
       tab_id: "Two",
-      question: "Design Systems",
-      answer: "Project systematization is something I place a lot of emphasis on. My passion Design Systems.",
+      question: "UI/UX Design",
+      answer: "I design clear and user-centered interfaces that make digital experiences simple, engaging, and visually appealing.",
       some_features: [
-        "Interface design",
-        "Creating design systems",
-        "Ui kits",
+        "Wireframing & prototyping",
+        "User journey mapping",
+        "Visual interface design",
       ]
     },
     {
       id: 3,
       tab_id: "Three",
-      question: "Website Design",
-      answer: "Project systematization is something I place a lot of emphasis on. My passion Design Systems.",
+      question: "Social Media Management",
+      answer: "I manage and create engaging social media content that helps brands stay active, consistent, and connected with their audience.",
       some_features: [
-        "Interface design",
-        "Creating design systems",
-        "Ui kits",
+        "Content planning",
+        "Post scheduling",
+        "Audience engagement",
       ]
     },
     {
       id: 4,
       tab_id: "Four",
-      question: "Branding",
-      answer: "Project systematization is something I place a lot of emphasis on. My passion Design Systems.",
+      question: "Graphic Design & Video Editing",
+      answer: "I create eye-catching graphics and videos that strengthen brand identity and communicate messages effectively.",
       some_features: [
-        "Interface design",
-        "Creating design systems",
-        "Ui kits",
+        "Logo & brand visuals",
+        "Marketing designs",
+        "Video production & editing",
+      ]
+    },
+    {
+      id: 5,
+      tab_id: "Five",
+      question: "Website Maintenance & Support",
+      answer: "I provide ongoing support, updates, and performance monitoring to ensure websites remain secure and fully optimized.",
+      some_features: [
+        "Website updates",
+        "Security monitoring",
+        "Speed optimization",
       ]
     }
   ]
