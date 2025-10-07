@@ -17,13 +17,13 @@ const portfolio_content = {
     {
       id: 2,
       img: portfolio_img_2,
-      bg_img: "/assets/img/portfolio/portfolio-3.jpg",
+      bg_img: "/assets/img/portfolio/AvillaMAG.jpg",
       title: 'Space Needle',
     },
     {
       id: 3,
       img: portfolio_img_3,
-      bg_img: "/assets/img/portfolio/portfolio-1.jpg",
+      bg_img: "/assets/img/portfolio/AvillaMAG.jpg",
       title: "Crisis Cleanup",
     }
   ]
@@ -55,7 +55,7 @@ const PortfolioAreaHomeOne = () => {
                     <Link href="/portfolio-details">
                       <div className="tp-portfolio-thumb img-1 w-img fix ">
                         <div className="tp-portfolio-thumb-img include-bg d-none"
-                          style={{ backgroundImage: 'url(/assets/img/portfolio/portfolio-2.jpg)' }}></div>
+                          style={{ backgroundImage: 'url(/assets/img/portfolio/AvillaMAG.jpg)' }}></div>
                         <div className="tp-portfolio-thumb-img ">
                           <Image data-speed="0.85" style={{ objectFit: 'cover', height: "auto" }} src={portfolio_img_1} alt="image-here" />
                         </div>
