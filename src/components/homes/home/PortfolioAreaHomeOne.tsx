@@ -85,8 +85,10 @@ const PortfolioAreaHomeOne = () => {
                     src={item.img}
                     alt={item.title}
                     className="portfolio-card-img"
-                    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '8px' }}
+                    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '12px' }}
                   />
+                  {/* Hover Effect */}
+                  <div className="portfolio-card-overlay"></div>
                 </div>
                 <div className="portfolio-card-body">
                   <h4 className="portfolio-card-title">{item.title}</h4>
