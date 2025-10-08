@@ -20,3 +20,42 @@
 @import "../../public/assets/scss/main.scss";
 
 
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-card-thumb {
+  position: relative;
+  background: #f6f6f6;
+}
+
+.portfolio-card-body {
+  padding: 20px;
+}
+
+.portfolio-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 4px;
+}
+
+.portfolio-card-category {
+  color: #777;
+  font-size: 15px;
+}
