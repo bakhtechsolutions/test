@@ -78,14 +78,14 @@ const PortfolioAreaHomeOne = () => {
         {/* Portfolio Grid */}
         <div className="portfolio-grid">
           {portfolio_data.map((item) => (
-            <div key={item.id} className="portfolio-card">
+            <div key={item.id} className="portfolio-card luxury-card">
               <Link href={item.url}>
                 <div className="portfolio-card-thumb">
                   <Image
                     src={item.img}
                     alt={item.title}
                     className="portfolio-card-img"
-                    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '12px' }}
+                    style={{ objectFit: 'cover', width: '100%', height: 'auto', borderRadius: '16px' }}
                   />
                   {/* Hover Effect */}
                   <div className="portfolio-card-overlay"></div>
